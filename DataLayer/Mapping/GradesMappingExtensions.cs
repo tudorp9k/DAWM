@@ -32,5 +32,18 @@ namespace DataLayer.Mapping
 
             return result;
         }
+
+        public static GradeAddDto ToGradeAddDto(this Grade grade)
+        {
+            if (grade == null) return null;
+
+            var result = new GradeAddDto();
+            result.Value = grade.Value;
+            result.Course = grade.Course;
+            result.DateCreated = grade.DateCreated;
+            result.StudentId = grade.StudentId;
+
+            return result;
+        }
     }
 }
